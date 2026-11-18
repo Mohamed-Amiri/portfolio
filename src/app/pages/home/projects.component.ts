@@ -12,6 +12,7 @@ import { PROJECTS } from '../../content/projects';
   template: `
     <app-section
       id="projects"
+      [soft]="true"
       eyebrow="Selected projects"
       heading="Two deployed full-stack applications"
       lede="Each window below is the real, live site. Click it to open the full application, or load the preview and browse inside."
@@ -61,7 +62,7 @@ import { PROJECTS } from '../../content/projects';
       }
       @media (min-width: 900px) {
         .entry {
-          grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
           gap: var(--space-7);
         }
         .entry__preview {
@@ -78,6 +79,9 @@ import { PROJECTS } from '../../content/projects';
         display: grid;
         gap: var(--space-4);
         align-content: start;
+      }
+      .entry__preview {
+        min-width: 0;
       }
       h3 {
         display: flex;

@@ -23,7 +23,7 @@ import { PROFILE } from '../../content/profile';
             <a class="btn" [href]="profile.cv.href" target="_blank" rel="noopener noreferrer">View CV (PDF)</a>
             <ul class="social">
               @for (link of profile.links; track link.href) {
-                <li><a [href]="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }}</a></li>
+                <li><a class="btn" [href]="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }} ↗</a></li>
               }
             </ul>
           </div>
@@ -89,10 +89,11 @@ import { PROFILE } from '../../content/profile';
       }
       .social {
         display: flex;
-        gap: var(--space-4);
+        flex-wrap: wrap;
+        gap: var(--space-2);
         list-style: none;
         padding: 0;
-        margin: 0 0 0 var(--space-2);
+        margin: 0;
         font-size: var(--text-sm);
       }
       .photo {

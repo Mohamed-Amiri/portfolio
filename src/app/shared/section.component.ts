@@ -5,7 +5,7 @@ import { Component, input } from '@angular/core';
   selector: 'app-section',
   standalone: true,
   template: `
-    <section class="section" [id]="id()" [attr.aria-labelledby]="id() + '-title'">
+    <section class="section" [class.section--soft]="soft()" [id]="id()" [attr.aria-labelledby]="id() + '-title'">
       <div class="container">
         <header class="section__head">
           <p class="eyebrow">{{ eyebrow() }}</p>
@@ -22,7 +22,10 @@ import { Component, input } from '@angular/core';
     `
       .section {
         padding: var(--space-8) 0;
-        border-top: 1px solid var(--border);
+        background: var(--section-bg, var(--bg));
+      }
+      .section--soft {
+        --section-bg: var(--bg-soft);
       }
       .section__head {
         display: grid;
@@ -41,4 +44,5 @@ export class SectionComponent {
   eyebrow = input.required<string>();
   heading = input.required<string>();
   lede = input<string>();
+  soft = input(false);
 }
