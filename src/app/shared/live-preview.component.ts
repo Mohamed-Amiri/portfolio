@@ -134,8 +134,8 @@ import { Project } from '../content/models';
         inset: 0;
         width: 100%;
         height: 100%;
-        object-fit: contain;
-        object-position: top;
+        object-fit: cover;
+        object-position: top center;
         transition: opacity 240ms ease;
       }
       .win__poster--hidden {
@@ -147,7 +147,7 @@ import { Project } from '../content/models';
         left: 0;
         border: 0;
         transform-origin: 0 0;
-        background: #fff;
+        background: var(--bg);
       }
       .win__shield {
         position: absolute;

@@ -32,19 +32,21 @@
 
   /* Colour — light */
   --bg: #ffffff;
-  --bg-subtle: #f6f6f4;
-  --bg-elevated: #ffffff;
-  --fg: #111318;
-  --fg-muted: #5b6070;
-  --fg-faint: #8b90a0;
-  --border: #e4e5e9;
-  --border-strong: #c9cbd3;
-  --accent: #1f45c2;
-  --accent-fg: #ffffff;
-  --accent-soft: #eef2fd;
-  --todo-bg: #fff7e0;
-  --todo-fg: #7a5200;
-  --todo-border: #f0c96a;
-  --shadow: 0 1px 2px rgb(17 19 24 / 0.06), 0 8px 24px -12px rgb(17 19 24 / 0.18);
+  --bg-soft: #f6f7f9;
+  --text: #0f1115;
+  --text-muted: #5b6270;
+  --border: #e5e7eb;
+  --accent: #2547d0;
+  --accent-soft: #eef1fd;
+  --accent-fg: var(--bg);
+
+  /* Compatibility aliases for existing component styles. */
+  --bg-subtle: var(--bg-soft);
+  --bg-elevated: var(--bg);
+  --fg: var(--text);
+  --fg-muted: var(--text-muted);
+  --fg-faint: var(--text-muted);
+  --border-strong: var(--border);
+  --shadow: none;
 }
 

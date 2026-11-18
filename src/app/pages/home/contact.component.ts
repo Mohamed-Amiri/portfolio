@@ -7,7 +7,7 @@ import { PROFILE } from '../../content/profile';
   standalone: true,
   imports: [SectionComponent],
   template: `
-    <app-section id="contact" eyebrow="Contact" heading="Let's talk">
+    <app-section id="contact" eyebrow="Contact" heading="Let's talk" [soft]="true">
       <div class="grid">
         <p class="muted measure">
           I'm open to junior full-stack roles and to conversations about Angular and Spring Boot work. The
@@ -18,7 +18,7 @@ import { PROFILE } from '../../content/profile';
           <dd><a [href]="'mailto:' + profile.email">{{ profile.email }}</a></dd>
           @for (link of profile.links; track link.href) {
             <dt>{{ link.label }}</dt>
-            <dd><a [href]="link.href" target="_blank" rel="noopener noreferrer">{{ pretty(link.href) }}</a></dd>
+            <dd><a class="btn" [href]="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }} <span aria-hidden="true">↗</span></a></dd>
           }
         </dl>
       </div>
@@ -59,7 +59,4 @@ import { PROFILE } from '../../content/profile';
 })
 export class ContactComponent {
   readonly profile = PROFILE;
-  pretty(href: string): string {
-    return href.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
-  }
 }

@@ -22,11 +22,12 @@ import { Component, input } from '@angular/core';
         margin: 0;
         font-family: var(--font-mono);
         font-size: var(--text-xs);
-        color: var(--fg-muted);
+        color: var(--accent);
       }
       li {
         padding: 0.2rem 0.5rem;
-        border: 1px solid var(--border);
+        border: 1px solid var(--accent-soft);
+        background: var(--accent-soft);
         border-radius: 4px;
         white-space: nowrap;
       }
