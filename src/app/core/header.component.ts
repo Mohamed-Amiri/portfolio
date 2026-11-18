@@ -67,6 +67,9 @@ import { PROFILE } from '../content/profile';
         margin: 0;
       }
       nav a {
+        display: flex;
+        align-items: center;
+        min-height: 2.75rem;
         color: var(--fg-muted);
         text-decoration: none;
         font-size: var(--text-sm);
