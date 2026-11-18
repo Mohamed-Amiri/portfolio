@@ -15,7 +15,7 @@ import { PROFILE } from '../../content/profile';
             <dd>
               <ul>
                 @for (item of group.items; track item) {
-                  <li>{{ item }}</li>
+                  <li [class.core-item]="group.name === 'Core stack'" [class.supporting-item]="group.name !== 'Core stack'">{{ item }}</li>
                 }
               </ul>
             </dd>
@@ -60,8 +60,23 @@ import { PROFILE } from '../../content/profile';
         margin: 0;
         display: flex;
         flex-wrap: wrap;
-        gap: 0.35rem var(--space-4);
-        font-size: var(--text-base);
+        gap: var(--space-2);
+      }
+      li {
+        border-radius: var(--radius);
+      }
+      .core-item {
+        padding: 0.55rem 0.8rem;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: var(--text-md);
+        font-weight: 600;
+      }
+      .supporting-item {
+        padding: 0.3rem 0.55rem;
+        background: var(--bg-soft);
+        color: var(--text-muted);
+        font-size: var(--text-sm);
       }
     `,
   ],

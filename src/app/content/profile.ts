@@ -10,8 +10,7 @@ export const PROFILE: Profile = {
   location: 'Beni Mellal, Morocco',
 
   intro: [
-    'I’m a full-stack developer. I build web apps with Angular and Spring Boot, from the REST API and database to the interface.',
-    'Two of my projects, Sakane and Safari, are live and documented below.',
+    'I build and deploy complete web apps with Angular and Spring Boot: from the REST API and database to the UI. Sakane and Safari are live below.',
   ],
 
   about: [
@@ -40,11 +39,10 @@ export const PROFILE: Profile = {
 
   // Only technologies actually used (CV + the two repositories).
   skills: [
-    { name: 'Frontend', items: ['Angular 18', 'TypeScript', 'RxJS', 'Signals', 'HTML5', 'CSS3 / SCSS', 'Responsive design', 'Bootstrap'] },
-    { name: 'Backend', items: ['Java 17', 'Spring Boot 3', 'Spring Security · JWT', 'Spring Data JPA · Hibernate', 'Bean Validation', 'MapStruct', 'Lombok', 'REST API design', 'OpenAPI / Swagger'] },
-    { name: 'Database', items: ['MySQL', 'H2', 'Data modelling', 'SQL'] },
-    { name: 'Tools', items: ['Git · GitHub', 'Maven', 'Postman', 'IntelliJ IDEA', 'VS Code'] },
-    { name: 'Deployment', items: ['Vercel', 'Azure App Service', 'Docker'] },
+    { name: 'Core stack', items: ['Angular', 'TypeScript', 'Java', 'Spring Boot', 'Spring Security · JWT', 'MySQL'] },
+    { name: 'Frontend', items: ['RxJS', 'Signals', 'SCSS', 'Bootstrap'] },
+    { name: 'Backend', items: ['JPA · Hibernate', 'MapStruct', 'Swagger'] },
+    { name: 'Tools & deployment', items: ['Git', 'Maven', 'Postman', 'Docker', 'Vercel', 'Azure'] },
   ],
 
   experience: [
@@ -66,17 +64,12 @@ export const PROFILE: Profile = {
     {
       period: '2024 – 2025',
       title: 'Full Stack Web Development (Java · Spring Boot · Angular)',
-      organisation: 'École Numérique Ahmed AL HANSALI · Simplon',
+      organisation: 'Simplon',
     },
     {
       period: '2022 – 2024',
       title: 'Technicien Spécialisé en Développement Informatique',
       organisation: 'École Marocaine Supérieure d’Enseignement Technique et Professionnel',
-    },
-    {
-      period: '2021 – 2024',
-      title: 'University studies, Geography (2nd year, alongside the diploma)',
-      organisation: 'FLSHBM',
     },
     {
       period: '2020 – 2021',

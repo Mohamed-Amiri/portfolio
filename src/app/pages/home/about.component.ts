@@ -8,7 +8,7 @@ import { PROFILE } from '../../content/profile';
   standalone: true,
   imports: [SectionComponent, RichTextComponent],
   template: `
-    <app-section id="about" eyebrow="About" heading="A bit about me">
+    <app-section id="about" eyebrow="About" heading="A bit about me" [soft]="true">
       <div class="grid">
         <div class="prose">
           <app-rich-text [paragraphs]="profile.about" />

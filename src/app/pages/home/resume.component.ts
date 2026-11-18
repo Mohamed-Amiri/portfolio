@@ -7,7 +7,7 @@ import { PROFILE } from '../../content/profile';
   standalone: true,
   imports: [SectionComponent],
   template: `
-    <app-section id="resume" eyebrow="Resume" heading="CV">
+    <app-section id="resume" eyebrow="Resume" heading="CV" [soft]="true">
       <div class="row">
         <p class="muted measure">
           A one-page PDF with my training, internships, projects and technical skills.
